@@ -2,27 +2,29 @@
 	<view>
 		<uni-section title="" padding>
 			<view style="margin-bottom: 16rpx">
-				<text style="font-size: 40rpx">距离婚期</text>
-				<text style="font-size: 45rpx; margin: 0 20rpx; border-bottom: 1rpx solid red; border-top: 1rpx solid red">2025年5月3日</text>
-				<text style="font-size: 40rpx">还有</text>
+				<text style="font-size: 40rpx; color: #b22222">距离婚期</text>
+				<text style="font-size: 50rpx; margin: 0 40rpx; color: #ffd700; font-weight: bold">2025年5月3日</text>
+				<text style="font-size: 40rpx; color: #b22222">还有</text>
 			</view>
-			<uni-countdown
-				:font-size="30"
-				:day="countdownDay"
-				:hour="countdownHour"
-				:minute="countdownMinute"
-				:second="countdownSecond"
-				:start="start"
-				color="#FFFFFF"
-				:show-colon="false"
-				background-color="red"
-				@timeup="handleTimeup"
-			/>
+			<view style="margin-bottom: 32rpx">
+				<uni-countdown
+					:font-size="24"
+					:day="countdownDay"
+					:hour="countdownHour"
+					:minute="countdownMinute"
+					:second="countdownSecond"
+					:start="start"
+					color="#FFFFFF"
+					:show-colon="false"
+					background-color="#FF4500"
+					@timeup="handleTimeup"
+				/>
+			</view>
 		</uni-section>
 		<view><uni-calendar :lunar="true" date="2025-05-03" :selected="[{ date: '2025-05-03', info: '婚礼' }]" /></view>
-		<view style="margin-top: 16rpx">
-			<button type="warn" @click="handleLocationClick">
-				<uni-icons color="white" style="vertical-align: middle" type="location-filled" size="30"></uni-icons>
+		<view style="margin-top: 32rpx">
+			<button style="color: #ffffff; background-color: #ff6347; border-color: #ffffff; border-width: 2px; border-style: solid" @click="handleLocationClick">
+				<uni-icons color="#FFD700" style="vertical-align: middle" type="location-filled" size="30"></uni-icons>
 				婚礼地点
 			</button>
 		</view>
@@ -114,4 +116,22 @@ onMounted(() => {
 });
 </script>
 
-<style></style>
+<style>
+.uni-calendar__content {
+	background-color: #fff0f5 !important;
+}
+.uni-calendar-item--checked {
+	background-color: #87cefa !important;
+}
+
+.uni-calendar-item__weeks-box-circle {
+	width: 0 !important;
+	height: 0 !important;
+	top: 0 !important;
+	right: 19px !important;
+}
+.uni-calendar-item__weeks-box-circle::after {
+	content: '♥';
+	color: #ff6347;
+}
+</style>
