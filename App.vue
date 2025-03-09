@@ -20,7 +20,9 @@ export default {
 @import '@/static/customicons.css';
 // 设置整个项目的背景色
 page {
-	background-color: #f5f5f5;
+	background-image: linear-gradient(90deg, #ff9a8b 0%, #ff6a88 55%, #ff99ac 100%);
+
+	// background-color: #f5f5f5;
 }
 
 /* #endif */

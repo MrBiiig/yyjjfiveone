@@ -1,31 +1,38 @@
 <template>
-	<view>
-		<uni-section title="" padding>
-			<view style="margin-bottom: 16rpx">
-				<text style="font-size: 40rpx; color: #b22222">距离婚期</text>
-				<text style="font-size: 50rpx; margin: 0 40rpx; color: #ffd700; font-weight: bold">2025年5月3日</text>
-				<text style="font-size: 40rpx; color: #b22222">还有</text>
-			</view>
-			<view style="margin-bottom: 32rpx">
-				<uni-countdown
-					:font-size="24"
-					:day="countdownDay"
-					:hour="countdownHour"
-					:minute="countdownMinute"
-					:second="countdownSecond"
-					:start="start"
-					color="#FFFFFF"
-					:show-colon="false"
-					background-color="#FF4500"
-					@timeup="handleTimeup"
-				/>
-			</view>
-		</uni-section>
+	<view
+		style="
+			height: 100vh;
+			box-sizing: border-box;
+			padding-bottom: constant(safe-area-inset-bottom);
+			padding-bottom: env(safe-area-inset-bottom);
+			background-image: linear-gradient(0deg, #ffe53b 0%, #ff2525 74%);
+			padding: 24rpx;
+		"
+	>
+		<view style="margin-bottom: 16rpx">
+			<uni-icons color="#FFD700" type="calendar" size="26"></uni-icons>
+			<text style="font-size: 40rpx; color: #ffffff; font-weight: bold">2025年5月3日</text>
+		</view>
+		<view style="margin-bottom: 32rpx">
+			<uni-countdown
+				:font-size="14"
+				:day="countdownDay"
+				:hour="countdownHour"
+				:minute="countdownMinute"
+				:second="countdownSecond"
+				:start="start"
+				color="#FFFFFF"
+				:show-colon="false"
+				@timeup="handleTimeup"
+			/>
+		</view>
+
 		<view><uni-calendar :lunar="true" date="2025-05-03" :selected="[{ date: '2025-05-03', info: '婚礼' }]" /></view>
-		<view style="margin-top: 32rpx">
-			<button style="color: #ffffff; background-color: #ff6347; border-color: #ffffff; border-width: 2px; border-style: solid" @click="handleLocationClick">
-				<uni-icons color="#FFD700" style="vertical-align: middle" type="location-filled" size="30"></uni-icons>
-				婚礼地点
+
+		<view style="margin-top: 64rpx">
+			<button size="mini" style="width: 100%; color: #ffffff; background-color: #ff6347" @click="handleLocationClick">
+				<uni-icons color="#FFD700" type="location" size="26"></uni-icons>
+				<text style="font-size: 40rpx">山东省海阳市方圆大酒店</text>
 			</button>
 		</view>
 	</view>
@@ -117,11 +124,15 @@ onMounted(() => {
 </script>
 
 <style>
+.uni-countdown__splitor {
+	color: #ffd700 !important;
+}
+
 .uni-calendar__content {
-	background-color: #fff0f5 !important;
+	background-color: rgba(255, 240, 245, 0.8) !important;
 }
 .uni-calendar-item--checked {
-	background-color: #87cefa !important;
+	background-color: #ffd700 !important;
 }
 
 .uni-calendar-item__weeks-box-circle {

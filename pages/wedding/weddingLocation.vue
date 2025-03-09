@@ -1,37 +1,41 @@
 <template>
-	<view class="uni-padding-wrap uni-common-mt">
-		<uni-segmented-control :current="segmentedCurrent" :values="segmentedItems" style-type="text" active-color="#FF4500" @clickItem="onClickItem" />
-	</view>
-	<view>
-		<map
-			style="width: 100%; height: 900rpx"
-			id="mapRef"
-			:scale="scale"
-			:min-scale="3"
-			:max-scale="20"
-			:enable-satellite="true"
-			:enable-traffic="true"
-			:enable-building="true"
-			:show-location="true"
-			:markers="covers"
-		></map>
-	</view>
-	<view style="margin-top: 16rpx">
-		<text style="font-size: 50rpx; margin: 0 40rpx; color: #ff4500; font-weight: bold">山东省海阳市方圆大酒店</text>
+	<view style="height: 100vh; box-sizing: border-box; padding-bottom: constant(safe-area-inset-bottom); padding-bottom: env(safe-area-inset-bottom); background-color: #ffffff">
+		<view>
+			<uni-segmented-control :current="segmentedCurrent" :values="segmentedItems" style-type="text" active-color="red" @clickItem="onClickItem" />
+		</view>
+		<view>
+			<map
+				style="width: 100%; height: calc(100vh - 70rpx)"
+				id="mapRef"
+				:scale="scale"
+				:latitude="latitude"
+				:longitude="longitude"
+				:min-scale="3"
+				:max-scale="20"
+				:enable-satellite="true"
+				:enable-traffic="true"
+				:enable-building="true"
+				:show-location="true"
+				:markers="covers"
+			></map>
+		</view>
 	</view>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue';
 
-const mapCtx = ref(uni.createMapContext('mapRef'));
+const mapCtx = ref();
 
 // 目标经纬度
 const latitudeTarget = 36.78395;
 const longitudeTarget = 121.205125;
 
+const latitude = ref(latitudeTarget);
+const longitude = ref(longitudeTarget);
+
 // 地图缩放程度
-const scale = ref(16);
+const scale = ref(6);
 
 // 分段器 项
 const segmentedItems = ['山东省', '海阳市', '方圆大酒店'];
@@ -41,10 +45,11 @@ const segmentedCurrent = ref(0);
 const covers = ref([
 	{
 		id: 1,
-		width: 24,
-		height: 36,
+		width: 42,
+		height: 42,
 		latitude: latitudeTarget,
-		longitude: longitudeTarget
+		longitude: longitudeTarget,
+		iconPath: '/static/wedding.png'
 	}
 ]);
 
@@ -57,9 +62,17 @@ const onClickItem = ({ currentIndex }) => {
 		scale.value = 8;
 	} else if (currentIndex === 2) {
 		// 精确地点
-		scale.value = 16;
+		scale.value = 15;
 	}
-	// 中心点矫正
+
+	/* 中心点矫正 */
+	// 支持真机端
+	latitude.value = latitudeTarget;
+	longitude.value = longitudeTarget;
+	// 如下语句 没支持真机端
+	if (!mapCtx.value) {
+		console.error(mapCtx.value);
+	}
 	mapCtx.value?.moveToLocation({
 		latitude: latitudeTarget,
 		longitude: longitudeTarget
@@ -67,6 +80,8 @@ const onClickItem = ({ currentIndex }) => {
 };
 
 onMounted(() => {
+	mapCtx.value = uni.createMapContext('mapRef');
+
 	// uni.getLocation({
 	// 	type: 'gcj02',
 	// 	success: function (res) {

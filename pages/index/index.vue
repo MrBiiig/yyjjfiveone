@@ -28,19 +28,33 @@ const handleClick = (pagePath) => {
 <style>
 .scroll-Y {
 	height: 100vh;
-	background-color: white;
+	box-sizing: border-box;
+	background-color: transparent;
 	padding-bottom: constant(safe-area-inset-bottom);
 	padding-bottom: env(safe-area-inset-bottom);
 }
 .index-card {
-	position: relative;
+	/* position: relative;
 	height: 300rpx;
 	border-radius: 12rpx;
 	margin: 24rpx;
-	box-shadow: 0 0 1rpx 4rpx #eeeeee;
+	box-shadow: 0 0 5px 2px rgba(120, 230, 170, 0.3); */
+	/* width: 700px; */
+	margin: 30rpx;
+	padding: 20rpx;
+	height: 250rpx;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	border-radius: 9px;
+	backdrop-filter: blur(5px);
+	background-color: rgba(173, 239, 255, 0.075);
+	box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
 }
 .card-hover-class {
-	box-shadow: 0 0 2rpx 4rpx #eeeeee;
+	box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 8px;
 }
 
 .card-img {
@@ -51,10 +65,19 @@ const handleClick = (pagePath) => {
 
 .card-text {
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-120rpx, 0);
-	color: white;
+	padding: 20rpx 36rpx;
+	background-color: rgba(244, 244, 244, 0.2);
 	font-size: 60rpx;
+	font-weight: bold;
+
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	border-radius: 9px;
+	backdrop-filter: blur(5px);
+	background-color: rgba(173, 239, 255, 0.075);
+	/* box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px; */
 }
 </style>
