@@ -6,6 +6,12 @@
 			}
 		},
 		{
+			"path": "pages/wedding/invitation",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
 			"path": "pages/couple/couple",
 			"style": {
 				"navigationBarTitleText": ""
@@ -20,15 +26,15 @@
 		{
 			"path": "pages/wedding/wedding",
 			"style": {
-				"navigationBarTitleText": ""
+				"navigationBarTitleText": "婚礼倒计时"
 			}
 		},
 		{
 			"path": "pages/wedding/weddingLocation",
 			"style": {
-				"navigationBarTitleText": ""
+				"navigationBarTitleText": "婚礼地址"
 			}
-		}
+		},
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

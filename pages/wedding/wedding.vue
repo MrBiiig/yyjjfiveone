@@ -1,4 +1,7 @@
 <template>
+	<!-- <view>
+		<text style="font-family: cangeryuyangti-W03">仓耳渔阳体 W01</text>
+	</view> -->
 	<view
 		style="
 			height: 100vh;
@@ -30,9 +33,15 @@
 		<view><uni-calendar :lunar="true" date="2025-05-03" :selected="[{ date: '2025-05-03', info: '婚礼' }]" /></view>
 
 		<view style="margin-top: 64rpx">
-			<button size="mini" style="width: 100%; color: #ffffff; background-color: #ff6347" @click="handleLocationClick">
-				<uni-icons color="#FFD700" type="location" size="26"></uni-icons>
-				<text style="font-size: 40rpx">山东省海阳市方圆大酒店</text>
+			<button
+				size="mini"
+				style="width: 100%; color: #ffffff; background-color: #ff6347"
+				@click="handleLocationClick"
+			>
+				<view style="display: flex; flex-direction: row; align-items: center; justify-content: center">
+					<uni-icons color="#FFD700" type="location" size="20"></uni-icons>
+					<text style="font-size: 32rpx">山东省海阳市方圆大酒店</text>
+				</view>
 			</button>
 		</view>
 	</view>

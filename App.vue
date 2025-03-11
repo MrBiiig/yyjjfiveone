@@ -25,6 +25,9 @@ page {
 	// background-color: #f5f5f5;
 }
 
+/* 引入第三方字体文件 */
+@import '@/static/fonts/cangeryuyangti/W03.css';
+
 /* #endif */
 .example-info {
 	font-size: 14px;
