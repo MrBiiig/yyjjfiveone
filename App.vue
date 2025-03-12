@@ -3,6 +3,18 @@ export default {
 	onLaunch: function () {
 		console.warn('当前组件仅支持 uni_modules 目录结构 ，请升级 HBuilderX 到 3.1.0 版本以上！');
 		console.log('App Launch');
+		uni.loadFontFace({
+			global: true,
+			family: 'seaside-resort-nf',
+			source: 'url(/static/fonts/seaside-resort-nf/a.ttf)',
+			success(a) {}
+		});
+		uni.loadFontFace({
+			global: true,
+			family: 'MicrosoftYaHei',
+			source: 'url(/static/fonts/MicrosoftYaHei/a.ttf)',
+			success(a) {}
+		});
 	},
 	onShow: function () {
 		console.log('App Show');
@@ -18,15 +30,13 @@ export default {
 @import '@/uni_modules/uni-scss/index.scss';
 /* #ifndef APP-NVUE */
 @import '@/static/customicons.css';
+
 // 设置整个项目的背景色
 page {
 	background-image: linear-gradient(90deg, #ff9a8b 0%, #ff6a88 55%, #ff99ac 100%);
 
 	// background-color: #f5f5f5;
 }
-
-/* 引入第三方字体文件 */
-@import '@/static/fonts/cangeryuyangti/W03.css';
 
 /* #endif */
 .example-info {
