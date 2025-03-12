@@ -29,17 +29,15 @@
 				WEDDING
 			</text>
 			<text style="position: absolute; left: 3rem; top: 12rem">
-				<text style="font-size: 1.3rem; font-family: none; color: white">喜+喜=</text>
-				<text style="font-size: 1.3rem; font-family: none; color: white">囍</text>
+				<text style="font-size: 1rem; font-family: none; color: white">喜+喜=</text>
+				<text style="font-size: 1rem; font-family: none; color: white">囍</text>
 			</text>
 
-			<text style="position: absolute; left: 3rem; top: 16rem">
-				<text style="font-size: 1.3rem; font-family: MicrosoftYaHei, seaside-resort-nf; color: white">
-					WEDDING时间为媒，青春为聘
-				</text>
+			<text style="position: absolute; left: 1rem; top: 14rem">
+				<text style="font-size: 0.8rem; font-family: none; color: white">时间为媒，青春为聘</text>
 			</text>
-			<text style="position: absolute; left: 3rem; top: 18rem">
-				<text style="font-size: 1.3rem; color: white">时间为媒，青春为聘11</text>
+			<text style="position: absolute; left: 3rem; top: 16rem">
+				<text style="font-size: 1rem; color: white">圆满礼成</text>
 			</text>
 		</view>
 	</scroll-view>
