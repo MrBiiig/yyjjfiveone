@@ -46,8 +46,16 @@
 			</text>
 		</view>
 		<!--  -->
-		<view class="chapter-header">
-			<image style="width: 3.5rem; height: 3.5rem" :src="circleSvg"></image>
+		<view class="chapter-header circle-on-left">
+			<image class="circle-style" :src="circleSvg"></image>
+			<view class="header-title-wrapper">
+				<view class="ch-header-title-wrapper">
+					<text>初见 即倾心</text>
+				</view>
+				<view class="en-header-title-wrapper">
+					<text>/ Love story about us /</text>
+				</view>
+			</view>
 		</view>
 	</scroll-view>
 </template>
@@ -56,9 +64,7 @@
 import { ref, onMounted } from 'vue';
 import circleSvg from '/static/invitation/circle.svg';
 
-onMounted(() => {
-	console.log(circleSvg);
-});
+onMounted(() => {});
 </script>
 
 <style lang="scss">
@@ -145,6 +151,48 @@ onMounted(() => {
 /* 章节头 标题区域 */
 .chapter-header {
 	width: 100%;
+	height: 9rem;
+	background-color: #eeeeee;
 	position: relative;
+
+	.circle-style {
+		width: 3.5rem;
+		height: 3.5rem;
+		position: absolute;
+		top: 50%;
+		transform: translate(0, -50%);
+	}
+	.header-title-wrapper {
+		width: 10rem;
+		height: 2rem;
+		position: absolute;
+		top: 50%;
+		transform: translate(0, -50%);
+		font-size: 1rem;
+		.ch-header-title-wrapper {
+			position: absolute;
+		}
+		.en-header-title-wrapper {
+			position: absolute;
+		}
+	}
+
+	// 圆居左的样式处理
+	&.circle-on-left {
+		.circle-style {
+			left: 6rem;
+		}
+		.header-title-wrapper {
+			left: 7rem;
+			.ch-header-title-wrapper {
+			}
+			.en-header-title-wrapper {
+			}
+		}
+	}
+	// 圆居右的样式处理
+	&.circle-on-right {
+		// ...
+	}
 }
 </style>
