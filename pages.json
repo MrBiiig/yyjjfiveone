@@ -5,6 +5,11 @@
 				"navigationBarTitleText": ""
 			}
 		}, {
+			"path": "pages/viewFonts/viewFonts",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		}, {
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "艾佳和五一"
@@ -34,6 +39,7 @@
 				"navigationBarTitleText": "婚礼地址"
 			}
 		}
+
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

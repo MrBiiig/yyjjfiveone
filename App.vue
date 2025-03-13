@@ -11,8 +11,20 @@ export default {
 		});
 		uni.loadFontFace({
 			global: true,
-			family: 'MicrosoftYaHei',
-			source: 'url(/static/fonts/MicrosoftYaHei/a.ttf)',
+			family: 'alimama-dongfangdakai',
+			source: 'url(/static/fonts/alimama-dongfangdakai/alimama-dongfangdakai.ttf)',
+			success(a) {}
+		});
+		uni.loadFontFace({
+			global: true,
+			family: 'LXGWWenKaiMono-Medium',
+			source: 'url(/static/fonts/LXGWWenKai/LXGWWenKaiMono-Medium.ttf)',
+			success(a) {}
+		});
+		uni.loadFontFace({
+			global: true,
+			family: 'TsangerYuYangT_W04_W04',
+			source: 'url(/static/fonts/TsangerYuYangT/TsangerYuYangT_W04_W04.ttf)',
 			success(a) {}
 		});
 	},
