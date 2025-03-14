@@ -52,7 +52,8 @@
 		/* 小程序特有相关 */
 		"appid": "wx6477f19490d74d59",
 		"setting": {
-			"urlCheck": false
+			"urlCheck": false,
+			"es6": true
 		},
 		"usingComponents": true,
 		"requiredPrivateInfos": ["getLocation"],

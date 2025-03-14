@@ -67,7 +67,7 @@ import circleSvg from '/static/invitation/circle.svg';
 onMounted(() => {});
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 /* 页面总容器样式 */
 .invitation-page {
 	height: 100vh;

@@ -1,5 +1,10 @@
 {
 	"pages": [{
+			"path": "pages/wedding/vrGuide/vrGuide",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		}, {
 			"path": "pages/wedding/invitation",
 			"style": {
 				"navigationBarTitleText": ""
