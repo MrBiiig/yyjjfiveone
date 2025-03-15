@@ -1,5 +1,10 @@
 {
 	"pages": [{
+			"path": "pages/wedding/vrGuider/vrGuider",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		}, {
 			"path": "pages/wedding/vrGuide/vrGuide",
 			"style": {
 				"navigationBarTitleText": ""
@@ -44,6 +49,7 @@
 				"navigationBarTitleText": "婚礼地址"
 			}
 		}
+
 
 	],
 	"globalStyle": {
