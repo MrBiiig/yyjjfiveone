@@ -1,7 +1,6 @@
 {
   "dependencies": {
     "g3d": "^0.2.9",
-    "three": "^0.108.0",
     "threejs-miniprogram": "^0.0.8"
   }
 }
