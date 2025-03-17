@@ -1,21 +1,21 @@
 {
 	"pages": [{
-			"path": "pages/wedding/vrGuider/vrGuider",
-			"style": {
-				"navigationBarTitleText": ""
-			}
-		}, {
-			"path": "pages/wedding/vrGuide/vrGuide",
-			"style": {
-				"navigationBarTitleText": ""
-			}
-		}, {
 			"path": "pages/wedding/invitation",
 			"style": {
 				"navigationBarTitleText": ""
 			}
 		}, {
 			"path": "pages/viewFonts/viewFonts",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		}, {
+			"path": "pages/wedding/vrGuider/vrGuider",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		}, {
+			"path": "pages/wedding/vrGuide/vrGuide",
 			"style": {
 				"navigationBarTitleText": ""
 			}

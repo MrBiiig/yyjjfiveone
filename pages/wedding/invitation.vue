@@ -45,7 +45,7 @@
 				>
 			</text>
 		</view>
-		<!--  -->
+		<!-- 章节标题 -->
 		<view class="chapter-header circle-on-left">
 			<image class="circle-style" :src="circleSvg"></image>
 			<view class="header-title-wrapper">
@@ -57,12 +57,73 @@
 				</view>
 			</view>
 		</view>
+		<!-- 照片展示区 - 1 -->
+		<view style="width: 100%">
+			<view style="background-color: #dbbc9b; width: 85%; height: 15rem; margin: auto"></view>
+			<view
+				style="
+					width: 85%;
+					margin-left: auto;
+					margin-right: auto;
+					margin-top: 1rem;
+					display: flex;
+					flex-direction: row;
+				"
+			>
+				<view style="flex: 1; height: 15rem; position: relative">
+					<view
+						style="
+							width: 6rem;
+							height: 9rem;
+							position: absolute;
+							top: 0;
+							left: 0;
+							background-color: #dbbcff;
+						"
+					></view>
+					<view
+						style="
+							width: 7rem;
+							height: 11rem;
+							position: absolute;
+							top: 1rem;
+							left: 1rem;
+							background-color: #ffbc9b;
+						"
+					></view>
+				</view>
+				<view style="flex: 1; height: 15rem; background-color: #db229b"></view>
+			</view>
+		</view>
+		<view style="width: 100%">
+			<view style="width: 85%; margin: auto">
+				<view style="font-family: LXGWWenKaiMono-Regular">
+					<text>2025.05.03</text>
+				</view>
+				<view style="font-family: LXGWWenKaiMono-Regular">
+					<text>/</text>
+				</view>
+				<view style="font-family: YsabeauInfant-MediumItalic">
+					<text>When you first meet someone,</text>
+				</view>
+				<view style="font-family: YsabeauInfant-MediumItalic">
+					<text>you fall in love</text>
+				</view>
+			</view>
+			<view style="width: 85%; margin: auto; display: flex; flex-direction: row">
+				<view style="flex: auto; width: 5rem; height: 7rem">
+					<image style="width: 100%; height: 100%" :src="verticalLineSvg"></image>
+				</view>
+				<view style="flex: auto"> </view>
+			</view>
+		</view>
 	</scroll-view>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue';
 import circleSvg from '/static/invitation/circle.svg';
+import verticalLineSvg from '/static/invitation/vertical-line.svg';
 
 onMounted(() => {});
 </script>
@@ -163,17 +224,20 @@ onMounted(() => {});
 		transform: translate(0, -50%);
 	}
 	.header-title-wrapper {
-		width: 10rem;
+		width: 14rem;
 		height: 2rem;
 		position: absolute;
 		top: 50%;
 		transform: translate(0, -50%);
 		font-size: 1rem;
 		.ch-header-title-wrapper {
+			font-family: LXGWWenKaiMono-Regular;
 			position: absolute;
 		}
 		.en-header-title-wrapper {
+			font-family: YsabeauInfant-MediumItalic;
 			position: absolute;
+			top: 1.6rem;
 		}
 	}
 
@@ -185,8 +249,10 @@ onMounted(() => {});
 		.header-title-wrapper {
 			left: 7rem;
 			.ch-header-title-wrapper {
+				left: 1.8rem;
 			}
 			.en-header-title-wrapper {
+				left: 1.8rem;
 			}
 		}
 	}

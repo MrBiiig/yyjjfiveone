@@ -23,6 +23,18 @@ export default {
 		});
 		uni.loadFontFace({
 			global: true,
+			family: 'LXGWWenKaiMono-Regular',
+			source: 'url(/static/fonts/LXGWWenKai/LXGWWenKaiMono-Regular.ttf)',
+			success(a) {}
+		});
+		uni.loadFontFace({
+			global: true,
+			family: 'YsabeauInfant-MediumItalic',
+			source: 'url(/static/fonts/Ysabeau/YsabeauInfant-MediumItalic.ttf)',
+			success(a) {}
+		});
+		uni.loadFontFace({
+			global: true,
 			family: 'TsangerYuYangT_W04_W04',
 			source: 'url(/static/fonts/TsangerYuYangT/TsangerYuYangT_W04_W04.ttf)',
 			success(a) {}
