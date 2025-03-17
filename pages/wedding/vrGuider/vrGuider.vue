@@ -58,12 +58,12 @@ const initThree = () => {
 
 			scene = new THREE.Scene();
 
-			camera = new THREE.PerspectiveCamera(45, canvas.width / canvas.height, 1, 10);
-			camera.position.set(0, 0, 5);
+			camera = new THREE.PerspectiveCamera(45, canvas.width / canvas.height, 1, 1000);
+			camera.position.set(0, 0, 70);
 			// scene.add(camera);
 			controls = new THREE.OrbitControls(camera, canvas);
 			controls.target = new THREE.Vector3(0, 0, 0);
-			controls.minDistance = 2; // 相机最近
+			controls.minDistance = 1; // 相机最近
 			controls.maxDistance = 500; // 相机最远
 			controls.autoRotate = false; // 图片自动旋转
 			controls.enableDamping = true; // 使动画循环使用时阻尼或自转 意思是否有惯性
@@ -73,7 +73,24 @@ const initThree = () => {
 			/*  */
 			const materials = [];
 			//根据左右上下前后的顺序构建六个面的材质集
-			const texture_left = new THREE.TextureLoader().load(
+			const texture_right = new THREE.TextureLoader().load('/static/vr/home/right.jpg');
+			materials.push(new THREE.MeshBasicMaterial({ map: texture_right }));
+
+			const texture_left = new THREE.TextureLoader().load('/static/vr/home/left.jpg');
+			materials.push(new THREE.MeshBasicMaterial({ map: texture_left }));
+
+			const texture_top = new THREE.TextureLoader().load('/static/vr/home/top.jpg');
+			materials.push(new THREE.MeshBasicMaterial({ map: texture_top }));
+
+			const texture_bottom = new THREE.TextureLoader().load('/static/vr/home/bottom.jpg');
+			materials.push(new THREE.MeshBasicMaterial({ map: texture_bottom }));
+
+			const texture_front = new THREE.TextureLoader().load('/static/vr/home/front.jpg');
+			materials.push(new THREE.MeshBasicMaterial({ map: texture_front }));
+
+			const texture_back = new THREE.TextureLoader().load('/static/vr/home/back.jpg');
+			materials.push(new THREE.MeshBasicMaterial({ map: texture_back }));
+			/* const texture_left = new THREE.TextureLoader().load(
 				'https://cdn.huodao.hk/upload_img/20220620/cebf6fbcafdf4f5c945e0881418e34ec.jpg'
 			);
 			materials.push(new THREE.MeshBasicMaterial({ map: texture_left }));
@@ -101,10 +118,10 @@ const initThree = () => {
 			const texture_back = new THREE.TextureLoader().load(
 				'https://cdn.huodao.hk/upload_img/20220620/c34262935511d61b2e9f456b689f5c1c.jpg'
 			);
-			materials.push(new THREE.MeshBasicMaterial({ map: texture_back }));
+			materials.push(new THREE.MeshBasicMaterial({ map: texture_back })); */
 
-			box = new THREE.Mesh(new THREE.BoxGeometry(1, 1, 1), materials);
-			box.geometry.scale(1, 1, -1);
+			box = new THREE.Mesh(new THREE.BoxGeometry(10, 10, 10), materials);
+			box.geometry.scale(10, 10, -10);
 			scene?.add(box);
 			/*  */
 
