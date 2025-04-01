@@ -355,34 +355,115 @@
 							<view class="year-month-row">
 								<text class="year-num">2025</text>
 								<text class="month-text">
-									<text class="month-num">11</text>
+									<text class="month-num">5</text>
 									<text class="month-label">月</text>
 								</text>
 							</view>
 							<view class="week-row">
 								<view class="bgcolor-wrapper">
-									<text class="week-item">一</text>
-									<text class="week-item">二</text>
-									<text class="week-item">三</text>
-									<text class="week-item">四</text>
-									<text class="week-item">五</text>
-									<text class="week-item">六</text>
-									<text class="week-item">日</text>
+									<view
+										v-for="(week, idx) in [
+											'一',
+											'二',
+											'三',
+											'四',
+											'五',
+											'六',
+											'日'
+										]"
+										:key="idx"
+										class="week-item"
+									>
+										<text>{{ week }}</text>
+									</view>
 								</view>
 							</view>
 							<view class="day-area">
-								<view class="day-line">
-									<view
-										v-for="day in [null, null, null, null, 1, 2, 3]"
-										class="day-item"
-									>
-										<text>{{ day }}</text>
+								<view
+									v-for="(dayLine, lineIdx) in [
+										[null, null, null, 1, 2, 3, 4],
+										[5, 6, 7, 8, 9, 10, 11],
+										[12, 13, 14, 15, 16, 17, 18],
+										[19, 20, 21, 22, 23, 24, 25],
+										[26, 27, 28, 29, 30, 31]
+									]"
+									:key="lineIdx"
+									class="day-line"
+								>
+									<view v-for="(day, idx) in dayLine" :key="idx" class="day-item">
+										<uni-icons
+											style="
+												position: absolute;
+												left: 50%;
+												top: 50%;
+												transform: translate(-50%, -50%);
+											"
+											:size="'1.3rem'"
+											v-if="day === 3"
+											type="heart-filled"
+											color="rgb(184, 175, 160)"
+										></uni-icons>
+										<text
+											:style="{ color: day === 3 ? 'white' : 'inherit' }"
+											style="position: relative"
+										>
+											{{ day }}
+										</text>
 									</view>
 								</view>
 							</view>
 						</view>
 					</view>
+					<view class="countdown-wrapper">
+						<view class="countdown-item">
+							<view class="num">
+								<text>{{ countdownData?.day }}</text>
+							</view>
+							<view class="label">
+								<text>天</text>
+							</view>
+						</view>
+						<view class="countdown-item">
+							<view class="num">
+								<text>{{ countdownData?.hour }}</text>
+							</view>
+							<view class="label">
+								<text>时</text>
+							</view>
+						</view>
+						<view class="countdown-item">
+							<view class="num">
+								<text>{{ countdownData?.minute }}</text>
+							</view>
+							<view class="label">
+								<text>分</text>
+							</view>
+						</view>
+						<view class="countdown-item">
+							<view class="num">
+								<text>{{ countdownData?.second }}</text>
+							</view>
+							<view class="label">
+								<text>秒</text>
+							</view>
+						</view>
+					</view>
 				</view>
+			</view>
+		</view>
+		<view
+			style="
+				margin-top: 2rem;
+				text-align: center;
+				font-family: LXGWWenKaiMono-Regular;
+				font-size: 0.9rem;
+			"
+		>
+			<view>
+				<text>2025年5月3日 星期六</text>
+			</view>
+			<view>
+				<text>农历二月廿四 12:00PM</text>
 			</view>
 		</view>
 	</scroll-view>
@@ -393,7 +474,49 @@ import { ref, onMounted } from 'vue';
 import circleSvg from '/static/invitation/circle.svg';
 import verticalLineSvg from '/static/invitation/vertical-line.svg';
 
-onMounted(() => {});
+const countdownData = ref({
+	day: '00',
+	hour: '00',
+	minute: '00',
+	second: '00'
+});
+
+const handleCountDown = () => {
+	// 设置目标时间：2025年5月3日12:00:00
+	const targetDate = new Date('2025-05-03T12:00:00');
+
+	// 获取当前时间
+	const now = new Date();
+
+	// 计算时间差（以毫秒为单位）
+	const timeDifference = targetDate - now;
+
+	// 如果目标时间已经过去，返回提示信息
+	if (timeDifference <= 0) {
+		uni.showToast({
+			title: '吉时已到！'
+		});
+	}
+
+	// 计算天、时、分、秒
+	const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+	const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+	const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+	countdownData.value = {
+		day: days && `${days}`.length > 1 ? days : `0${days || 0}`,
+		hour: hours && `${hours}`.length > 1 ? hours : `0${hours || 0}`,
+		minute: minutes && `${minutes}`.length > 1 ? minutes : `0${minutes || 0}`,
+		second: seconds && `${seconds}`.length > 1 ? seconds : `0${seconds || 0}`
+	};
+};
+
+onMounted(() => {
+	setInterval(() => {
+		handleCountDown();
+	}, 250);
+});
 </script>
 
 <style lang="scss" scoped>
@@ -555,7 +678,7 @@ onMounted(() => {});
 		border-color: $themeColor;
 		border-style: solid;
 		border-width: 0.157rem;
-		padding: 1.7325rem 0 1.7325rem;
+		padding: 0.7rem 0 0.7rem;
 
 		color: $themeColor;
 		.calendar {
@@ -578,17 +701,85 @@ onMounted(() => {});
 					}
 				}
 			}
+
+			$dayWeekLineWidth: calc(100% - 2 * 1.2rem);
+			$dayWeekLinePaddingH: 0.7rem;
+
 			// 周度标记这一行
 			.week-row {
+				$weekFontSize: 0.7rem;
 				.bgcolor-wrapper {
+					width: $dayWeekLineWidth;
+					margin: auto;
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					background-color: $themeColor;
+					padding: 0.2rem $dayWeekLinePaddingH;
+					box-sizing: border-box;
+					border-radius: $weekFontSize;
 					.week-item {
+						width: 1rem;
+						text-align: center;
+
+						font-size: $weekFontSize;
+						color: white;
 					}
 				}
 			}
 			// 日期区域
 			.day-area {
+				$dayFontSize: 0.6rem;
+
 				.day-line {
+					width: $dayWeekLineWidth;
+					margin: auto;
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					padding: 0 $dayWeekLinePaddingH;
+					margin: 0.9rem auto;
+					box-sizing: border-box;
+					.day-item {
+						width: 1rem;
+						text-align: center;
+
+						font-size: $dayFontSize;
+						color: rgb(102, 102, 102);
+
+						position: relative;
+					}
 				}
+			}
+		}
+	}
+
+	.countdown-wrapper {
+		position: absolute;
+		top: 0;
+		left: 1rem;
+		height: 100%;
+		width: 3rem;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 1rem 0;
+		box-sizing: border-box;
+
+		.countdown-item {
+			background-color: $themeColor;
+			color: white;
+
+			padding: 0.3rem 0;
+			border-radius: 8px;
+
+			.num {
+				font-size: 1rem;
+			}
+			.label {
+				font-size: 0.7rem;
+				margin-top: 0.1rem;
 			}
 		}
 	}
