@@ -10,16 +10,6 @@
 				"navigationBarTitleText": ""
 			}
 		}, {
-			"path": "pages/wedding/vrGuider/vrGuider",
-			"style": {
-				"navigationBarTitleText": ""
-			}
-		}, {
-			"path": "pages/wedding/vrGuide/vrGuide",
-			"style": {
-				"navigationBarTitleText": ""
-			}
-		}, {
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "艾佳和五一"

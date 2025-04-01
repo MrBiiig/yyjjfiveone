@@ -6,37 +6,43 @@ export default {
 		uni.loadFontFace({
 			global: true,
 			family: 'seaside-resort-nf',
-			source: 'url(/static/fonts/seaside-resort-nf/a.ttf)',
+			source: 'url(https://cdn.yyjjfiveone.cn/fonts/seaside-resort-nf/a.ttf)',
+			// source: 'url(/static/fonts/seaside-resort-nf/a.ttf)',
 			success(a) {}
 		});
 		uni.loadFontFace({
 			global: true,
 			family: 'alimama-dongfangdakai',
-			source: 'url(/static/fonts/alimama-dongfangdakai/alimama-dongfangdakai.ttf)',
+			source: 'url(http://cdn.yyjjfiveone.cn/fonts/alimama-dongfangdakai/alimama-dongfangdakai.ttf)',
+			// source: 'url(/static/fonts/alimama-dongfangdakai/alimama-dongfangdakai.ttf)',
 			success(a) {}
 		});
 		uni.loadFontFace({
 			global: true,
 			family: 'LXGWWenKaiMono-Medium',
-			source: 'url(/static/fonts/LXGWWenKai/LXGWWenKaiMono-Medium.ttf)',
+			source: 'url(http://cdn.yyjjfiveone.cn/fonts/LXGWWenKai/LXGWWenKaiMono-Medium.ttf)',
+			// source: 'url(/static/fonts/LXGWWenKai/LXGWWenKaiMono-Medium.ttf)',
 			success(a) {}
 		});
 		uni.loadFontFace({
 			global: true,
 			family: 'LXGWWenKaiMono-Regular',
-			source: 'url(/static/fonts/LXGWWenKai/LXGWWenKaiMono-Regular.ttf)',
+			source: 'url(http://cdn.yyjjfiveone.cn/fonts/LXGWWenKai/LXGWWenKaiMono-Regular.ttf)',
+			// source: 'url(/static/fonts/LXGWWenKai/LXGWWenKaiMono-Regular.ttf)',
 			success(a) {}
 		});
 		uni.loadFontFace({
 			global: true,
 			family: 'YsabeauInfant-MediumItalic',
-			source: 'url(/static/fonts/Ysabeau/YsabeauInfant-MediumItalic.ttf)',
+			source: 'url(http://cdn.yyjjfiveone.cn/fonts/Ysabeau/YsabeauInfant-MediumItalic.ttf)',
+			// source: 'url(/static/fonts/Ysabeau/YsabeauInfant-MediumItalic.ttf)',
 			success(a) {}
 		});
 		uni.loadFontFace({
 			global: true,
 			family: 'TsangerYuYangT_W04_W04',
-			source: 'url(/static/fonts/TsangerYuYangT/TsangerYuYangT_W04_W04.ttf)',
+			source: 'url(http://cdn.yyjjfiveone.cn/fonts/TsangerYuYangT/TsangerYuYangT_W04_W04.ttf)',
+			// source: 'url(/static/fonts/TsangerYuYangT/TsangerYuYangT_W04_W04.ttf)',
 			success(a) {}
 		});
 	},
@@ -54,6 +60,8 @@ export default {
 @import '@/uni_modules/uni-scss/index.scss';
 /* #ifndef APP-NVUE */
 @import '@/static/customicons.css';
+
+// @import 'http://cdn.yyjjfiveone.cn/fonts/aaa.css';
 
 // 设置整个项目的背景色
 page {
