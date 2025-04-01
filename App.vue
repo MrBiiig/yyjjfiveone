@@ -13,35 +13,35 @@ export default {
 		uni.loadFontFace({
 			global: true,
 			family: 'alimama-dongfangdakai',
-			source: 'url(http://cdn.yyjjfiveone.cn/fonts/alimama-dongfangdakai/alimama-dongfangdakai.ttf)',
+			source: 'url(https://cdn.yyjjfiveone.cn/fonts/alimama-dongfangdakai/alimama-dongfangdakai.ttf)',
 			// source: 'url(/static/fonts/alimama-dongfangdakai/alimama-dongfangdakai.ttf)',
 			success(a) {}
 		});
 		uni.loadFontFace({
 			global: true,
 			family: 'LXGWWenKaiMono-Medium',
-			source: 'url(http://cdn.yyjjfiveone.cn/fonts/LXGWWenKai/LXGWWenKaiMono-Medium.ttf)',
+			source: 'url(https://cdn.yyjjfiveone.cn/fonts/LXGWWenKai/LXGWWenKaiMono-Medium.ttf)',
 			// source: 'url(/static/fonts/LXGWWenKai/LXGWWenKaiMono-Medium.ttf)',
 			success(a) {}
 		});
 		uni.loadFontFace({
 			global: true,
 			family: 'LXGWWenKaiMono-Regular',
-			source: 'url(http://cdn.yyjjfiveone.cn/fonts/LXGWWenKai/LXGWWenKaiMono-Regular.ttf)',
+			source: 'url(https://cdn.yyjjfiveone.cn/fonts/LXGWWenKai/LXGWWenKaiMono-Regular.ttf)',
 			// source: 'url(/static/fonts/LXGWWenKai/LXGWWenKaiMono-Regular.ttf)',
 			success(a) {}
 		});
 		uni.loadFontFace({
 			global: true,
 			family: 'YsabeauInfant-MediumItalic',
-			source: 'url(http://cdn.yyjjfiveone.cn/fonts/Ysabeau/YsabeauInfant-MediumItalic.ttf)',
+			source: 'url(https://cdn.yyjjfiveone.cn/fonts/Ysabeau/YsabeauInfant-MediumItalic.ttf)',
 			// source: 'url(/static/fonts/Ysabeau/YsabeauInfant-MediumItalic.ttf)',
 			success(a) {}
 		});
 		uni.loadFontFace({
 			global: true,
 			family: 'TsangerYuYangT_W04_W04',
-			source: 'url(http://cdn.yyjjfiveone.cn/fonts/TsangerYuYangT/TsangerYuYangT_W04_W04.ttf)',
+			source: 'url(https://cdn.yyjjfiveone.cn/fonts/TsangerYuYangT/TsangerYuYangT_W04_W04.ttf)',
 			// source: 'url(/static/fonts/TsangerYuYangT/TsangerYuYangT_W04_W04.ttf)',
 			success(a) {}
 		});

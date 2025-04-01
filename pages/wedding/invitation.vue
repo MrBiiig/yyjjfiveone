@@ -1,5 +1,9 @@
 <template>
-	<scroll-view scroll-y="true" class="invitation-page">
+	<!-- <scroll-view scroll-y="true" class="invitation-page">
+		
+	</scroll-view> -->
+
+	<view class="invitation-page">
 		<!-- 顶部图片 -->
 		<view class="header-img-block bgcolor">
 			<view class="header-img-background-container">
@@ -11,7 +15,7 @@
 				<view class="header-img-mask">
 					<view class="header-img-wrapper">
 						<image
-							src="/static/invitation/header.jpg"
+							src="https://cdn.yyjjfiveone.cn/imgs/header.PNG"
 							mode="widthFix"
 							class="header-img"
 						></image>
@@ -83,7 +87,13 @@
 		</view>
 		<!-- 照片展示区 - 1 -->
 		<view style="width: 100%">
-			<view style="background-color: #dbbc9b; width: 85%; height: 15rem; margin: auto"></view>
+			<view style="width: 85%; margin: auto">
+				<image
+					src="https://cdn.yyjjfiveone.cn/imgs/1-h-1.PNG"
+					mode="widthFix"
+					style="width: 100%; height: 100%"
+				></image>
+			</view>
 			<view
 				style="
 					width: 85%;
@@ -97,26 +107,37 @@
 				<view style="flex: 1; height: 15rem; position: relative">
 					<view
 						style="
-							width: 6rem;
-							height: 9rem;
+							width: 6.5rem;
+							height: 10rem;
 							position: absolute;
 							top: 0;
 							left: 0;
-							background-color: #dbbcff;
+							background-color: #dbbc9b;
 						"
 					></view>
 					<view
 						style="
-							width: 7rem;
-							height: 11rem;
+							width: 8rem;
+							height: 12rem;
 							position: absolute;
 							top: 1rem;
 							left: 1rem;
-							background-color: #ffbc9b;
 						"
-					></view>
+					>
+						<image
+							src="https://cdn.yyjjfiveone.cn/imgs/1-v-1.PNG"
+							mode="widthFix"
+							style="width: 100%; height: 100%"
+						></image>
+					</view>
 				</view>
-				<view style="flex: 1; height: 15rem; background-color: #db229b"></view>
+				<view style="flex: 1; height: 15rem">
+					<image
+						src="https://cdn.yyjjfiveone.cn/imgs/1-v-2.PNG"
+						mode="widthFix"
+						style="width: 100%; height: 100%"
+					></image>
+				</view>
 			</view>
 		</view>
 		<view style="width: 100%">
@@ -188,7 +209,13 @@
 		<view style="width: 100%">
 			<view style="width: 85%; margin: auto; display: flex; justify-content: space-between">
 				<view style="flex: 1; padding-right: 0.3rem">
-					<view style="height: 14rem; background-color: #db229b"></view>
+					<view style="height: 15rem">
+						<image
+							:src="`https://cdn.yyjjfiveone.cn/imgs/bride.PNG?t=${timestamp}`"
+							mode="widthFix"
+							style="width: 100%; height: 100%"
+						></image>
+					</view>
 					<view>
 						<view style="font-size: 1.3rem; font-family: YsabeauInfant-MediumItalic">
 							<text>BRIDE</text>
@@ -202,7 +229,13 @@
 					</view>
 				</view>
 				<view style="flex: 1; padding-left: 0.3rem">
-					<view style="height: 14rem; background-color: #dbbc9b"></view>
+					<view style="height: 15rem">
+						<image
+							src="https://cdn.yyjjfiveone.cn/imgs/groom.PNG"
+							mode="widthFix"
+							style="width: 100%; height: 100%"
+						></image>
+					</view>
 					<view>
 						<view style="font-size: 1.3rem; font-family: YsabeauInfant-MediumItalic">
 							<text>GROOM</text>
@@ -216,26 +249,25 @@
 					</view>
 				</view>
 			</view>
-			<view style="width: 85%; margin: auto; margin-top: 3rem; min-height: 10rem">
+			<view style="width: 85%; margin: auto; margin-top: 3rem; min-height: 14rem">
 				<view style="position: relative">
 					<view
 						style="
 							width: 20rem;
-							height: 10rem;
-							background-color: #dbbcff;
+							height: 13.5rem;
+							background-color: #dbbc9b;
 							position: absolute;
 							left: 0.6rem;
 							top: 0.6rem;
 						"
 					></view>
-					<view
-						style="
-							width: 20rem;
-							height: 10rem;
-							background-color: red;
-							position: absolute;
-						"
-					></view>
+					<view style="width: 20rem; height: 13.5rem; position: absolute">
+						<image
+							src="https://cdn.yyjjfiveone.cn/imgs/2-h-1.PNG"
+							mode="widthFix"
+							style="width: 100%; height: 100%"
+						></image>
+					</view>
 				</view>
 			</view>
 			<view style="width: 85%; margin: auto; margin-top: 1rem">
@@ -286,33 +318,44 @@
 		</view>
 		<view>
 			<view style="width: 85%; margin: auto">
-				<view style="width: 100%; height: 12rem; position: relative">
+				<view style="width: 100%; height: 15.5rem; position: relative">
 					<view
 						style="
 							width: 20rem;
-							height: 10rem;
-							background-color: #db229b;
+							height: 13.5rem;
+							background-color: #dbbc9b;
 							position: absolute;
 							left: 0.6rem;
 							top: 0.6rem;
 						"
 					></view>
-					<view
-						style="
-							width: 20rem;
-							height: 10rem;
-							background-color: red;
-							position: relative;
-						"
-					></view>
+					<view style="width: 20rem; height: 13.5rem; position: relative">
+						<image
+							src="https://cdn.yyjjfiveone.cn/imgs/3-h-1.PNG"
+							mode="widthFix"
+							style="width: 100%; height: 100%"
+						></image>
+					</view>
 				</view>
 			</view>
 			<view style="width: 85%; margin: auto; display: flex; flex-direction: row">
 				<view style="flex: 4; padding-right: 0.3rem">
-					<view style="width: 100%; height: 15rem; background-color: #db229b"></view>
+					<view style="width: 100%; height: 17rem">
+						<image
+							src="https://cdn.yyjjfiveone.cn/imgs/3-v-1.PNG"
+							mode="widthFix"
+							style="width: 100%; height: 100%"
+						></image>
+					</view>
 				</view>
 				<view style="flex: 3; padding-left: 0.3rem">
-					<view style="width: 100%; height: 15rem; background-color: #dbbc9b"></view>
+					<view style="width: 100%; height: 17rem">
+						<image
+							src="https://cdn.yyjjfiveone.cn/imgs/3-v-2.PNG"
+							mode="widthFix"
+							style="width: 100%; height: 100%"
+						></image>
+					</view>
 				</view>
 			</view>
 			<view style="width: 85%; margin: auto; margin-top: 1rem">
@@ -466,13 +509,76 @@
 				<text>农历二月廿四 12:00PM</text>
 			</view>
 		</view>
-	</scroll-view>
+		<view
+			style="
+				margin-top: 2rem;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: relative;
+			"
+		>
+			<view
+				style="
+					width: 90%;
+					height: 15rem;
+					position: absolute;
+					bottom: -1rem;
+					background-color: rgb(184, 175, 160);
+				"
+			></view>
+			<map
+				style="width: 80%; height: 20rem"
+				id="mapRef"
+				:scale="scale"
+				:latitude="latitude"
+				:longitude="longitude"
+				:min-scale="3"
+				:max-scale="20"
+				:enable-satellite="false"
+				:enable-traffic="false"
+				:enable-building="true"
+				:show-location="true"
+				:markers="covers"
+				:polyline="polyline"
+			></map>
+		</view>
+		<view
+			style="
+				margin-top: 3rem;
+				text-align: center;
+				font-family: LXGWWenKaiMono-Regular;
+				font-size: 0.9rem;
+			"
+		>
+			<view>
+				<text>山东省海阳市方圆大酒店</text>
+			</view>
+			<view>
+				<text>酒店2楼 吉祥如意厅</text>
+			</view>
+		</view>
+		<view
+			style="
+				margin-top: 3rem;
+				text-align: center;
+				font-family: LXGWWenKaiMono-Regular;
+				font-size: 1.1rem;
+			"
+		>
+			好久不见，婚礼见
+		</view>
+	</view>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 import circleSvg from '/static/invitation/circle.svg';
 import verticalLineSvg from '/static/invitation/vertical-line.svg';
+
+const timestamp = ref(Date.now());
+
+const audio = ref();
 
 const countdownData = ref({
 	day: '00',
@@ -512,10 +618,151 @@ const handleCountDown = () => {
 	};
 };
 
+const mapCtx = ref();
+
+// 目标经纬度
+const latitudeTarget = 36.78395;
+const longitudeTarget = 121.205125;
+
+const latitude = ref(latitudeTarget);
+const longitude = ref(longitudeTarget);
+
+// 地图缩放程度
+const scale = ref(5);
+
+// 分段器 项
+const segmentedItems = ['山东省', '海阳市', '方圆大酒店'];
+const segmentedCurrent = ref(null);
+
+// 地图路径线分段颜色
+const polylineColorList = [
+	'#33A8FF',
+	'#A8FF33',
+	'#FFB733',
+	'#33FFB7',
+	'#B733FF',
+	'#FF5733',
+	'#33FF57',
+	'#3357FF',
+	'#FF33A8',
+	'#33FFF5',
+	'#F5FF33',
+	'#FF8C33',
+	'#33FF8C',
+	'#8C33FF',
+	'#FF3333'
+];
+
+// 地图标记点
+const covers = ref([
+	{
+		id: 1,
+		width: 48,
+		height: 48,
+		latitude: latitudeTarget,
+		longitude: longitudeTarget,
+		iconPath: '/static/heart-location.png',
+		callout: {
+			content: '山东省海阳市方圆大酒店',
+			/* ALWAYS or BYCLICK */
+			display: 'ALWAYS',
+			fontSize: 13,
+			color: '#ffffff',
+			bgColor: '#FF3333cc',
+			borderRadius: 8,
+			padding: 4
+		}
+	}
+]);
+
+const polyline = ref([]);
+
+/**
+ * 移动地图中心点到指定经纬度
+ */
+const moveToLocation = ({ latitude: la, longitude: lo }) => {
+	// 支持真机端
+	latitude.value = la;
+	longitude.value = lo;
+	// 如下语句 没支持真机端
+	if (!mapCtx.value) {
+		console.error(mapCtx.value);
+	}
+	mapCtx.value?.moveToLocation({
+		latitude: la,
+		longitude: lo
+	});
+};
+// 根据地图路径线起点终点 计算共有几个点的经纬度
+const generateCoordinates = (start, end) => {
+	const coordinates = [];
+	const steps = polylineColorList.length; // We need 8 points including start and end, so 6 intermediate points
+
+	coordinates.push(start);
+
+	const latStep = (end.latitude - start.latitude) / (steps + 1);
+	const lonStep = (end.longitude - start.longitude) / (steps + 1);
+
+	for (let i = 1; i <= steps; i++) {
+		const latitude = start.latitude + latStep * i;
+		const longitude = start.longitude + lonStep * i;
+		coordinates.push({ latitude, longitude });
+	}
+
+	coordinates.push(end);
+
+	return coordinates;
+};
+
 onMounted(() => {
+	// 获取音频文件路径
+	const audioPath = 'https://cdn.yyjjfiveone.cn/musics/huihuadong.mp3' + `?t=${timestamp.value}`;
+	// 创建并播放音频对象
+	audio.value = uni.getBackgroundAudioManager();
+
+	audio.value.title = '혜화동';
+	audio.value.singer = '朴宝蓝';
+	audio.value.coverImgUrl =
+		'https://cdn.yyjjfiveone.cn/imgs/musicCover.PNG' + `?t=${timestamp.value}`;
+	audio.value.src = audioPath;
+
 	setInterval(() => {
 		handleCountDown();
 	}, 250);
+
+	mapCtx.value = uni.createMapContext('mapRef');
+	uni.getLocation({
+		type: 'gcj02',
+		success: function (res) {
+			console.log(res);
+			setTimeout(() => {
+				moveToLocation({ latitude: res.latitude, longitude: res.longitude });
+			}, 200);
+			polyline.value = [
+				{
+					points: generateCoordinates(
+						{ latitude: res.latitude, longitude: res.longitude },
+						{ latitude: latitudeTarget, longitude: longitudeTarget }
+					),
+					width: 12,
+					// color: '#FFC0CB',
+					colorList: polylineColorList,
+					arrowLine: true,
+					arrowIconPath: '/static/twi-heart.png',
+					borderColor: '#ffffff',
+					borderWidth: 2
+				}
+			];
+		},
+		fail: function (err) {
+			console.error(err);
+		}
+	});
+});
+
+onUnmounted(() => {
+	audio.value?.stop();
+	audio.value?.destroy();
 });
 </script>
 
@@ -527,6 +774,7 @@ onMounted(() => {
 	padding-bottom: constant(safe-area-inset-bottom);
 	padding-bottom: env(safe-area-inset-bottom);
 	background-color: white;
+	overflow-y: auto;
 }
 
 /* 顶部图片区域 */
@@ -604,7 +852,6 @@ onMounted(() => {
 .chapter-header {
 	width: 100%;
 	height: 9rem;
-	background-color: #eeeeee;
 	position: relative;
 
 	.circle-style {
