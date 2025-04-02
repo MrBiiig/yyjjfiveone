@@ -81,7 +81,7 @@
 					<text>初见 即倾心</text>
 				</view>
 				<view class="en-header-title-wrapper">
-					<text>/ Love story about us /</text>
+					<text>/ Love struck at first sight /</text>
 				</view>
 			</view>
 		</view>
@@ -149,10 +149,13 @@
 					<text>/</text>
 				</view>
 				<view style="font-family: YsabeauInfant-MediumItalic">
-					<text>When you first meet someone,</text>
+					<text>Perhaps with the fair weather,</text>
 				</view>
 				<view style="font-family: YsabeauInfant-MediumItalic">
-					<text>you fall in love</text>
+					<text>I wish to pen you some whispers,</text>
+				</view>
+				<view style="font-family: YsabeauInfant-MediumItalic">
+					<text>too shy for the sea to detect</text>
 				</view>
 			</view>
 			<view
@@ -202,7 +205,7 @@
 					<text>眉眼弯弯 星河皆你</text>
 				</view>
 				<view class="en-header-title-wrapper">
-					<text>/ Love story about us /</text>
+					<text>/ Your eyes, full of stars /</text>
 				</view>
 			</view>
 		</view>
@@ -568,6 +571,7 @@
 		>
 			好久不见，婚礼见
 		</view>
+		<view style="height: 2rem"></view>
 	</view>
 </template>
 
@@ -576,6 +580,21 @@ import { ref, onMounted, onUnmounted } from 'vue';
 import circleSvg from '/static/invitation/circle.svg';
 import verticalLineSvg from '/static/invitation/vertical-line.svg';
 
+import { onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app';
+onShareAppMessage(() => {
+	return {
+		title: '文墨含香凝锦字，银釭照影共韶光。',
+		path: 'pages/wedding/invitation',
+		imageUrl: 'https://cdn.yyjjfiveone.cn/imgs/sharecover.PNG'
+	};
+});
+onShareTimeline(() => {
+	return {
+		title: '文墨含香凝锦字，银釭照影共韶光。',
+		path: 'pages/wedding/invitation',
+		imageUrl: 'https://cdn.yyjjfiveone.cn/imgs/sharecover.PNG'
+	};
+});
 const timestamp = ref(Date.now());
 
 const audio = ref();
@@ -715,16 +734,19 @@ const generateCoordinates = (start, end) => {
 };
 
 onMounted(() => {
-	// 获取音频文件路径
-	const audioPath = 'https://cdn.yyjjfiveone.cn/musics/huihuadong.mp3' + `?t=${timestamp.value}`;
-	// 创建并播放音频对象
-	audio.value = uni.getBackgroundAudioManager();
+	setTimeout(() => {
+		// 获取音频文件路径
+		const audioPath =
+			'https://cdn.yyjjfiveone.cn/musics/huihuadong.mp3' + `?t=${timestamp.value}`;
+		// 创建并播放音频对象
+		audio.value = uni.getBackgroundAudioManager();
 
-	audio.value.title = '혜화동';
-	audio.value.singer = '朴宝蓝';
-	audio.value.coverImgUrl =
-		'https://cdn.yyjjfiveone.cn/imgs/musicCover.PNG' + `?t=${timestamp.value}`;
-	audio.value.src = audioPath;
+		audio.value.title = '혜화동';
+		audio.value.singer = '朴宝蓝';
+		audio.value.coverImgUrl =
+			'https://cdn.yyjjfiveone.cn/imgs/musicCover.PNG' + `?t=${timestamp.value}`;
+		audio.value.src = audioPath;
+	}, 3000);
 
 	setInterval(() => {
 		handleCountDown();
