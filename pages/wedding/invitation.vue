@@ -37,12 +37,7 @@
 			</text>
 			<text class="fix-text-overlap-img" style="position: absolute; left: 3rem; top: 12rem">
 				<text
-					style="
-						font-size: 1.1rem;
-						font-family: LXGWWenKaiMono-Medium;
-						color: white;
-						letter-spacing: 0.1rem;
-					"
+					style="font-size: 1.1rem; font-family: LXGWWenKaiMono-Medium; color: white; letter-spacing: 0.1rem"
 				>
 					喜+喜=囍
 				</text>
@@ -50,24 +45,14 @@
 
 			<text class="fix-text-overlap-img" style="position: absolute; left: 1.5rem; top: 14rem">
 				<text
-					style="
-						font-size: 0.9rem;
-						font-family: TsangerYuYangT_W04_W04;
-						color: white;
-						letter-spacing: 0.1rem;
-					"
+					style="font-size: 0.9rem; font-family: TsangerYuYangT_W04_W04; color: white; letter-spacing: 0.1rem"
 				>
 					时间为媒，青春为聘
 				</text>
 			</text>
 			<text class="fix-text-overlap-img" style="position: absolute; left: 3rem; top: 16rem">
 				<text
-					style="
-						font-size: 1.1rem;
-						font-family: LXGWWenKaiMono-Medium;
-						color: white;
-						letter-spacing: 0.1rem;
-					"
+					style="font-size: 1.1rem; font-family: LXGWWenKaiMono-Medium; color: white; letter-spacing: 0.1rem"
 				>
 					圆满礼成
 				</text>
@@ -115,15 +100,7 @@
 							background-color: #dbbc9b;
 						"
 					></view>
-					<view
-						style="
-							width: 8rem;
-							height: 12rem;
-							position: absolute;
-							top: 1rem;
-							left: 1rem;
-						"
-					>
+					<view style="width: 8rem; height: 12rem; position: absolute; top: 1rem; left: 1rem">
 						<image
 							src="https://cdn.yyjjfiveone.cn/imgs/1-v-1.PNG"
 							mode="widthFix"
@@ -158,15 +135,7 @@
 					<text>too shy for the sea to detect</text>
 				</view>
 			</view>
-			<view
-				style="
-					width: 85%;
-					margin: auto;
-					margin-top: 1rem;
-					display: flex;
-					flex-direction: row;
-				"
-			>
+			<view style="width: 85%; margin: auto; margin-top: 1rem; display: flex; flex-direction: row">
 				<view style="flex: 1rem 1rem 0; width: 5.2rem; height: 7.35rem">
 					<view style="width: 100%; height: 100%">
 						<image style="width: 100%; height: 100%" :src="verticalLineSvg"></image>
@@ -408,15 +377,7 @@
 							<view class="week-row">
 								<view class="bgcolor-wrapper">
 									<view
-										v-for="(week, idx) in [
-											'一',
-											'二',
-											'三',
-											'四',
-											'五',
-											'六',
-											'日'
-										]"
+										v-for="(week, idx) in ['一', '二', '三', '四', '五', '六', '日']"
 										:key="idx"
 										class="week-item"
 									>
@@ -497,30 +458,15 @@
 				</view>
 			</view>
 		</view>
-		<view
-			style="
-				margin-top: 2rem;
-				text-align: center;
-				font-family: LXGWWenKaiMono-Regular;
-				font-size: 0.9rem;
-			"
-		>
+		<view style="margin-top: 2rem; text-align: center; font-family: LXGWWenKaiMono-Regular; font-size: 0.9rem">
 			<view>
 				<text>2025年5月3日 星期六</text>
 			</view>
 			<view>
-				<text>农历二月廿四 12:00PM</text>
+				<text>农历四月初六 12:00PM</text>
 			</view>
 		</view>
-		<view
-			style="
-				margin-top: 2rem;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				position: relative;
-			"
-		>
+		<view style="margin-top: 2rem; display: flex; justify-content: center; align-items: center; position: relative">
 			<view
 				style="
 					width: 90%;
@@ -546,14 +492,7 @@
 				:polyline="polyline"
 			></map>
 		</view>
-		<view
-			style="
-				margin-top: 3rem;
-				text-align: center;
-				font-family: LXGWWenKaiMono-Regular;
-				font-size: 0.9rem;
-			"
-		>
+		<view style="margin-top: 3rem; text-align: center; font-family: LXGWWenKaiMono-Regular; font-size: 0.9rem">
 			<view>
 				<text>山东省海阳市方圆大酒店</text>
 			</view>
@@ -561,14 +500,7 @@
 				<text>酒店2楼 吉祥如意厅</text>
 			</view>
 		</view>
-		<view
-			style="
-				margin-top: 3rem;
-				text-align: center;
-				font-family: LXGWWenKaiMono-Regular;
-				font-size: 1.1rem;
-			"
-		>
+		<view style="margin-top: 3rem; text-align: center; font-family: LXGWWenKaiMono-Regular; font-size: 1.1rem">
 			好久不见，婚礼见
 		</view>
 		<view style="height: 2rem"></view>
@@ -680,11 +612,11 @@ const covers = ref([
 		height: 48,
 		latitude: latitudeTarget,
 		longitude: longitudeTarget,
-		iconPath: '/static/heart-location.png',
+		iconPath: '/static/corgi.png',
 		callout: {
 			content: '山东省海阳市方圆大酒店',
 			/* ALWAYS or BYCLICK */
-			display: 'ALWAYS',
+			display: 'BYCLICK',
 			fontSize: 13,
 			color: '#ffffff',
 			bgColor: '#FF3333cc',
@@ -736,15 +668,13 @@ const generateCoordinates = (start, end) => {
 onMounted(() => {
 	setTimeout(() => {
 		// 获取音频文件路径
-		const audioPath =
-			'https://cdn.yyjjfiveone.cn/musics/huihuadong.mp3' + `?t=${timestamp.value}`;
+		const audioPath = 'https://cdn.yyjjfiveone.cn/musics/huihuadong.mp3' + `?t=${timestamp.value}`;
 		// 创建并播放音频对象
 		audio.value = uni.getBackgroundAudioManager();
 
 		audio.value.title = '혜화동';
 		audio.value.singer = '朴宝蓝';
-		audio.value.coverImgUrl =
-			'https://cdn.yyjjfiveone.cn/imgs/musicCover.PNG' + `?t=${timestamp.value}`;
+		audio.value.coverImgUrl = 'https://cdn.yyjjfiveone.cn/imgs/musicCover.PNG' + `?t=${timestamp.value}`;
 		audio.value.src = audioPath;
 	}, 3000);
 
@@ -766,11 +696,11 @@ onMounted(() => {
 						{ latitude: res.latitude, longitude: res.longitude },
 						{ latitude: latitudeTarget, longitude: longitudeTarget }
 					),
-					width: 12,
-					// color: '#FFC0CB',
-					colorList: polylineColorList,
+					width: 14,
+					color: '#FFC0CB',
+					// colorList: polylineColorList,
 					arrowLine: true,
-					arrowIconPath: '/static/twi-heart.png',
+					arrowIconPath: '/static/dog-paw.png',
 					borderColor: '#ffffff',
 					borderWidth: 2
 				}
